@@ -6360,7 +6360,7 @@ Employee = spark.createDataFrame([ ('1', 'Joe', '70000', '1'),
                                   ('4', 'Max', '90000', '1')],
                                  ['Id', 'Name', 'Sallary','DepartmentId'] )
                                  
-```
+
 
 ```
 ##### SQL #####
@@ -6375,41 +6375,47 @@ results.show()
 
 =====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x
 
+
 ```
+##### SQL #####
 
+df.createOrReplaceTempView('Name')
 
-```python
+results = spark.sql("SELECT * FROM people")
+
+results = spark.sql("select * from people WHEre age=30")
+
+results.show()
+
+x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x===
+
+###### spark_dataframe to dataframe #####
+
+df = spark.createDataFrame(data)
+df
+type(df)
+pyspark.sql.dataframe.DataFrame
+
+x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x===
+
+Python Dictionary get() Method
+dictionary.get(keyname, value)
+
 car = {
   "brand": "Ford",
   "model": "Mustang",
   "year": 1964
 }
-```
 
+x = car.get("brand","NEW_BRAND")
+print(x)
+Ford
 
-```python
-x = car.get("model")
-```
+x = car.get("price","NEW_BRAND")
+print(x)
+NEW_BRAND
 
-
-```python
-x
-```
-
-
-
-
-    'Mustang'
-
-
+x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x====x=====x===
 
 ```
-dictionary = { key: value }
-dictionary.get(<return the value>)
-value
-```
 
-
-```python
-
-```
