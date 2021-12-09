@@ -53,44 +53,48 @@ parallelize() method is the SparkContext's parallelize method to create a parall
 ```
 
 
-```python
+```
+try:
+  run this code 
+except:
+  Execute this code when there is an exception
+else:
+  No exception? Run this code.
+finally:
+  Always run this code.
+```
+
+
+                    ##### Parallelize(x) #####
+```
+from pyspark import SparkContext, SparkConf
 from pyspark.sql import SparkSession
-from pyspark import SparkConf, SparkContext
-spark = SparkSession.builder.appName('Name_Spark').getOrCreate()
-spark
+
+# create entry points to spark
+try:
+    #stop sparkcontext if running
+    sc.stop()
+except:
+    pass
+finally:
+    #create object of SparkContext
+    sc = SparkContext()
+    spark = SparkSession(sparkContext=sc)
+    
+x = [1, 2, 3, 4]
+#create an RDD parallelize() is a function in SparkContext and is used to create an RDD from a list collection. 
+
+rdd = sc.parallelize(x)
+display(rdd)
+
+                    ###### Parallelize another example #####
+import numpy as np
+rdd1 = sc.parallelize(np.arange(0, 30, 2))
 ```
 
 
 
-
-
-    <div>
-        <p><b>SparkSession - in-memory</b></p>
-
-<div>
-    <p><b>SparkContext</b></p>
-
-    <p><a href="http://9a16fcc4671d:4040">Spark UI</a></p>
-
-    <dl>
-      <dt>Version</dt>
-        <dd><code>v3.2.0</code></dd>
-      <dt>Master</dt>
-        <dd><code>local[*]</code></dd>
-      <dt>AppName</dt>
-        <dd><code>Name_Spark</code></dd>
-    </dl>
-</div>
-
-    </div>
-
-
-
-
 ```
-                    
-                    ##### Creating Method #####
-
 from pyspark.sql import SparkSession
 from pyspark import SparkConf, SparkContext
 spark = SparkSession.builder.appName('Name_Spark').getOrCreate()
