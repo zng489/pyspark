@@ -75,10 +75,10 @@ finally:
 
 # - Parallelize(x) 
 ```diff
-- from pyspark import SparkContext, SparkConf
-- from pyspark.sql import SparkSession
+from pyspark import SparkContext, SparkConf
+from pyspark.sql import SparkSession
 
-# create entry points to spark
+- create entry points to spark
 try:
     #stop sparkcontext if running
     sc.stop()
@@ -90,8 +90,8 @@ finally:
     spark = SparkSession(sparkContext=sc)
     
 x = [1, 2, 3, 4]
-#create an RDD parallelize() is a function in SparkContext and is used to create an RDD from a list collection. 
 
+- create an RDD parallelize() is a function in SparkContext and is used to create an RDD from a list collection. 
 rdd = sc.parallelize(x)
 display(rdd)
 ```
