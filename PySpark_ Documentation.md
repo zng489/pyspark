@@ -1,3 +1,11 @@
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+
+
 ```python
 # https://medium.com/renato-dantas/temajupyternotebook-f754c065cfe9
 !pip install jupyterthemes
@@ -65,10 +73,10 @@ finally:
 ```
 
 
-                    ##### Parallelize(x) #####
-```
-from pyspark import SparkContext, SparkConf
-from pyspark.sql import SparkSession
+# - Parallelize(x) 
+```diff
+- from pyspark import SparkContext, SparkConf
+- from pyspark.sql import SparkSession
 
 # create entry points to spark
 try:
@@ -86,7 +94,7 @@ x = [1, 2, 3, 4]
 
 rdd = sc.parallelize(x)
 display(rdd)
-
+```
                     ###### Parallelize another example #####
 import numpy as np
 rdd1 = sc.parallelize(np.arange(0, 30, 2))
