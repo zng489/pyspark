@@ -29,8 +29,7 @@ Let’s look on an example:
 
 ---
 
-# Sc.parallelize()
-# sc.parallelize() method is the spark context parallelize method to create a parallelized collection
+# Sc.parallelize() - sc.parallelize() method is the spark context parallelize method to create a parallelized collection.
 ##### https://www.oreilly.com/library/view/pyspark-cookbook/9781788835367/891b6c2a-889b-4189-a133-52c14436e666.xhtml
 Spark context parallelize method
 Under the covers, there are quite a few actions that happened when you created your RDD. Let's start with the RDD creation and break down this code snippet:
