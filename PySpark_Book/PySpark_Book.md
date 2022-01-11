@@ -11,3 +11,19 @@ Partitions
 RDDs are divided into smaller chunks called Partitions, and when you execute some action, a task is launched per partition. So it means, the more the number of partitions, the more the parallelism. Spark automatically decides the number of partitions that an RDD has to be divided into but you can also specify the number of partitions when creating an RDD. These partitions of an RDD is distributed across all the nodes in the network.
 
 ---
+
+
+# .cache() and .persist() ...
+### https://www.learntospark.com/2020/05/persist-and-cache-in-apache-spark.html
+### https://www.youtube.com/watch?v=4U1qscwcB1g&t=10s
+###
+###
+###
+
+Use when you work constantly with the same dataset.
+
+##### https://medium.com/pecan-ai/caching-spark-dataframe-how-when-79a8c13254c0
+When to cache?
+If you’re executing multiple actions on the same DataFrame then cache it.
+Let’s look on an example:
+
