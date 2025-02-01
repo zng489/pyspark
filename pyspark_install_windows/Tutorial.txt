@@ -1,0 +1,37 @@
+https://sparkbyexamples.com/pyspark-tutorial/
+
+- Install Python or Anaconda distribution
+- Install Java 8
+- Install Apache Spark
+- Setup winutils.exe
+Download wunutils.exe file from winutils, and copy it to %SPARK_HOME%\bin folder. Winutils are different for each Hadoop version hence download the right version from https://github.com/steveloughran/winutils
+
+
+
+
+
+-https://www.sicara.ai/blog/2017-05-02-get-started-pyspark-jupyter-notebook-3-minutes
+
+import findspark
+findspark.init()
+
+import pyspark
+import random
+
+sc = pyspark.SparkContext(appName="Pi")
+num_samples = 100000000
+
+def inside(p):     
+  x, y = random.random(), random.random()
+  return x*x + y*y < 1
+
+count = sc.parallelize(range(0, num_samples)).filter(inside).count()
+
+pi = 4 * count / num_samples
+print(pi)
+
+sc.stop()
+
+
+
+Spark Web UI
